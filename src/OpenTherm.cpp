@@ -523,7 +523,7 @@ unsigned int OpenTherm::temperatureToData(float temperature)
 }
 
 const int OpenTherm::getInPin() {
-  retutm inPin;
+  return inPin;
 };
 
 const int OpenTherm::getOutPin() {
