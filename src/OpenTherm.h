@@ -88,38 +88,38 @@ enum class OpenThermMessageID : byte
     TdhwSet                                     = 56, // f8.8    DHW Setpoint(°C) (Remote parameter 1)
     MaxTSet                                     = 57, // f8.8    Max CH water Setpoint(°C) (Remote parameters 2)
     StatusVentilationHeatRecovery               = 70, // flag8/flag8   Master and Slave Status flags ventilation / heat - recovery
-    Vset                                        = 71, // -/u8  Relative ventilation position (0-100%). 0% is the minimum set ventilation and 100% is the maximum set ventilation. 
-    ASFflagsOEMfaultCodeVentilationHeatRecovery = 72, // flag8/u8  Application-specific fault flags and OEM fault code ventilation / heat-recovery 
-    OEMDiagnosticCodeVentilationHeatRecovery    = 73, // u16     An OEM-specific diagnostic/service code for ventilation / heat-recovery system 
-    SConfigSMemberIDCodeVentilationHeatRecovery = 74, // flag8/u8  Slave Configuration Flags / Slave MemberID Code ventilation / heat-recovery 
-    OpenThermVersionVentilationHeatRecovery     = 75, // f8.8    The implemented version of the OpenTherm Protocol Specification in the ventilation / heat-recovery system. 
-    VentilationHeatRecoveryVersion              = 76, // u8/u8     Ventilation / heat-recovery product version number and type 
-    RelVentLevel                                = 77, // -/u8  Relative ventilation (0-100%) 
-    RHexhaust                                   = 78, // -/u8  Relative humidity exhaust air (0-100%) 
-    CO2exhaust                                  = 79, // u16     CO2 level exhaust air (0-2000 ppm) 
-    Tsi                                         = 80, // f8.8    Supply inlet temperature (°C) 
-    Tso                                         = 81, // f8.8    Supply outlet temperature (°C) 
-    Tei                                         = 82, // f8.8    Exhaust inlet temperature (°C) 
-    Teo                                         = 83, // f8.8    Exhaust outlet temperature (°C) 
-    RPMexhaust                                  = 84, // u16     Exhaust fan speed in rpm 
-    RPMsupply                                   = 85, // u16     Supply fan speed in rpm 
-    RBPflagsVentilationHeatRecovery             = 86, // flag8/flag8   Remote ventilation / heat-recovery parameter transfer-enable & read/write flags 
-    NominalVentilationValue                     = 87, // u8/-  Nominal relative value for ventilation (0-100 %) 
-    TSPventilationHeatRecovery                  = 88, // u8/u8     Number of Transparent-Slave-Parameters supported by TSP’s ventilation / heat-recovery 
-    TSPindexTSPvalueVentilationHeatRecovery     = 89, // u8/u8     Index number / Value of referred-to transparent TSP’s ventilation / heat-recovery parameter. 
-    FHBsizeVentilationHeatRecovery              = 90, // u8/u8     Size of Fault-History-Buffer supported by ventilation / heat-recovery 
-    FHBindexFHBvalueVentilationHeatRecovery     = 91, // u8/u8     Index number / Value of referred-to fault-history buffer entry ventilation / heat-recovery 
-    Brand                                       = 93, // u8/u8     Index number of the character in the text string ASCII character referenced by the above index number 
-    BrandVersion                                = 94, // u8/u8     Index number of the character in the text string ASCII character referenced by the above index number 
-    BrandSerialNumber                           = 95, // u8/u8     Index number of the character in the text string ASCII character referenced by the above index number 
-    CoolingOperationHours                       = 96, // u16     Number of hours that the slave is in Cooling Mode. Reset by zero is optional for slave 
-    PowerCycles                                 = 97, // u16     Number of Power Cycles of a slave (wake-up after Reset), Reset by zero is optional for slave 
-    RFsensorStatusInformation                   = 98, // special/special   For a specific RF sensor the RF strength and battery level is written 
-    RemoteOverrideOperatingModeHeatingDHW       = 99, // special/special   Operating Mode HC1, HC2/ Operating Mode DHW 
-    RemoteOverrideFunction                     = 100, // flag8/-   Function of manual and program changes in master and remote room Setpoint 
-    StatusSolarStorage                         = 101, // flag8/flag8   Master and Slave Status flags Solar Storage 
-    ASFflagsOEMfaultCodeSolarStorage           = 102, // flag8/u8  Application-specific fault flags and OEM fault code Solar Storage 
-    SConfigSMemberIDcodeSolarStorage           = 103, // flag8/u8  Slave Configuration Flags / Slave MemberID Code Solar Storage 
+    Vset                                        = 71, // -/u8  Relative ventilation position (0-100%). 0% is the minimum set ventilation and 100% is the maximum set ventilation.
+    ASFflagsOEMfaultCodeVentilationHeatRecovery = 72, // flag8/u8  Application-specific fault flags and OEM fault code ventilation / heat-recovery
+    OEMDiagnosticCodeVentilationHeatRecovery    = 73, // u16     An OEM-specific diagnostic/service code for ventilation / heat-recovery system
+    SConfigSMemberIDCodeVentilationHeatRecovery = 74, // flag8/u8  Slave Configuration Flags / Slave MemberID Code ventilation / heat-recovery
+    OpenThermVersionVentilationHeatRecovery     = 75, // f8.8    The implemented version of the OpenTherm Protocol Specification in the ventilation / heat-recovery system.
+    VentilationHeatRecoveryVersion              = 76, // u8/u8     Ventilation / heat-recovery product version number and type
+    RelVentLevel                                = 77, // -/u8  Relative ventilation (0-100%)
+    RHexhaust                                   = 78, // -/u8  Relative humidity exhaust air (0-100%)
+    CO2exhaust                                  = 79, // u16     CO2 level exhaust air (0-2000 ppm)
+    Tsi                                         = 80, // f8.8    Supply inlet temperature (°C)
+    Tso                                         = 81, // f8.8    Supply outlet temperature (°C)
+    Tei                                         = 82, // f8.8    Exhaust inlet temperature (°C)
+    Teo                                         = 83, // f8.8    Exhaust outlet temperature (°C)
+    RPMexhaust                                  = 84, // u16     Exhaust fan speed in rpm
+    RPMsupply                                   = 85, // u16     Supply fan speed in rpm
+    RBPflagsVentilationHeatRecovery             = 86, // flag8/flag8   Remote ventilation / heat-recovery parameter transfer-enable & read/write flags
+    NominalVentilationValue                     = 87, // u8/-  Nominal relative value for ventilation (0-100 %)
+    TSPventilationHeatRecovery                  = 88, // u8/u8     Number of Transparent-Slave-Parameters supported by TSP’s ventilation / heat-recovery
+    TSPindexTSPvalueVentilationHeatRecovery     = 89, // u8/u8     Index number / Value of referred-to transparent TSP’s ventilation / heat-recovery parameter.
+    FHBsizeVentilationHeatRecovery              = 90, // u8/u8     Size of Fault-History-Buffer supported by ventilation / heat-recovery
+    FHBindexFHBvalueVentilationHeatRecovery     = 91, // u8/u8     Index number / Value of referred-to fault-history buffer entry ventilation / heat-recovery
+    Brand                                       = 93, // u8/u8     Index number of the character in the text string ASCII character referenced by the above index number
+    BrandVersion                                = 94, // u8/u8     Index number of the character in the text string ASCII character referenced by the above index number
+    BrandSerialNumber                           = 95, // u8/u8     Index number of the character in the text string ASCII character referenced by the above index number
+    CoolingOperationHours                       = 96, // u16     Number of hours that the slave is in Cooling Mode. Reset by zero is optional for slave
+    PowerCycles                                 = 97, // u16     Number of Power Cycles of a slave (wake-up after Reset), Reset by zero is optional for slave
+    RFsensorStatusInformation                   = 98, // special/special   For a specific RF sensor the RF strength and battery level is written
+    RemoteOverrideOperatingModeHeatingDHW       = 99, // special/special   Operating Mode HC1, HC2/ Operating Mode DHW
+    RemoteOverrideFunction                     = 100, // flag8/-   Function of manual and program changes in master and remote room Setpoint
+    StatusSolarStorage                         = 101, // flag8/flag8   Master and Slave Status flags Solar Storage
+    ASFflagsOEMfaultCodeSolarStorage           = 102, // flag8/u8  Application-specific fault flags and OEM fault code Solar Storage
+    SConfigSMemberIDcodeSolarStorage           = 103, // flag8/u8  Slave Configuration Flags / Slave MemberID Code Solar Storage
     SolarStorageVersion                        = 104, // u8/u8     Solar Storage product version number and type
     TSPSolarStorage                            = 105, // u8/u8     Number of Transparent - Slave - Parameters supported by TSP’s Solar Storage
     TSPindexTSPvalueSolarStorage               = 106, // u8/u8     Index number / Value of referred - to transparent TSP’s Solar Storage parameter.
@@ -213,6 +213,9 @@ public:
     static uint16_t getUInt(const unsigned long response);
     static float getFloat(const unsigned long response);
     static unsigned int temperatureToData(float temperature);
+
+    static unsigned int getInPin();
+    static unsigned int getOutPin();
 
     // basic requests
     unsigned long setBoilerStatus(bool enableCentralHeating, bool enableHotWater = false, bool enableCooling = false, bool enableOutsideTemperatureCompensation = false, bool enableCentralHeating2 = false);

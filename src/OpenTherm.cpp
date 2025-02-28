@@ -522,6 +522,14 @@ unsigned int OpenTherm::temperatureToData(float temperature)
     return data;
 }
 
+unsigned int OpenTherm::getInPin() {
+  retutm inPin;
+};
+
+unsigned int OpenTherm::getOutPin() {
+  return outPin;
+};
+
 // basic requests
 
 unsigned long OpenTherm::setBoilerStatus(bool enableCentralHeating, bool enableHotWater, bool enableCooling, bool enableOutsideTemperatureCompensation, bool enableCentralHeating2)
