@@ -530,6 +530,14 @@ const int OpenTherm::getOutPin() {
   return outPin;
 };
 
+void OpenTherm::setInPin(int ipin) {
+  inPin = ipin;
+};
+
+void OpenTherm::setOutPin(int opin) {
+  outPin = opin;
+};
+
 // basic requests
 
 unsigned long OpenTherm::setBoilerStatus(bool enableCentralHeating, bool enableHotWater, bool enableCooling, bool enableOutsideTemperatureCompensation, bool enableCentralHeating2)

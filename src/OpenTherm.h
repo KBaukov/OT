@@ -164,6 +164,9 @@ class OpenTherm
 public:
     OpenTherm(int inPin = 4, int outPin = 5, bool isSlave = false);
     ~OpenTherm();
+
+    void init(int inPin = 4, int outPin = 5, bool isSlave = false);
+
     volatile OpenThermStatus status;
     void begin(void (*handleInterruptCallback)(void));
     void begin(void (*handleInterruptCallback)(void), void (*processResponseCallback)(unsigned long, OpenThermResponseStatus));
@@ -214,8 +217,13 @@ public:
     static float getFloat(const unsigned long response);
     static unsigned int temperatureToData(float temperature);
 
-    static const int getInPin();
-    static const int getOutPin();
+    const int getInPin();
+    const int getOutPin();
+
+    void setInPin(int);
+    void setOutPin(int);
+
+
 
     // basic requests
     unsigned long setBoilerStatus(bool enableCentralHeating, bool enableHotWater = false, bool enableCooling = false, bool enableOutsideTemperatureCompensation = false, bool enableCentralHeating2 = false);
@@ -228,10 +236,14 @@ public:
     float getPressure();
     unsigned char getFault();
 
+    int inPin;
+    int outPin;
+    bool isSlave;
+
 private:
-    const int inPin;
-    const int outPin;
-    const bool isSlave;
+    // const int inPin;
+    // const int outPin;
+    // const bool isSlave;
 
     volatile unsigned long response;
     volatile OpenThermResponseStatus responseStatus;
