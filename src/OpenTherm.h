@@ -214,8 +214,8 @@ public:
     static float getFloat(const unsigned long response);
     static unsigned int temperatureToData(float temperature);
 
-    static unsigned int getInPin();
-    static unsigned int getOutPin();
+    static const int getInPin();
+    static const int getOutPin();
 
     // basic requests
     unsigned long setBoilerStatus(bool enableCentralHeating, bool enableHotWater = false, bool enableCooling = false, bool enableOutsideTemperatureCompensation = false, bool enableCentralHeating2 = false);
